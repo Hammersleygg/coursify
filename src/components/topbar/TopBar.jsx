@@ -1,11 +1,15 @@
-import React from "./topbar.css";
+import React from 'react';
 import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png';
+import './topbar.css';
+
 
 export default function TopBar() {
     const user = false;
     return (
         <div className="top">
             <div className="topLeft">
+                <img src={logo} alt="coursify logo" className="topLogo" />
                 <i className=" "></i> 
             </div>
 

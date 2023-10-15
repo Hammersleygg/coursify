@@ -57,5 +57,11 @@
     margin-left: 18px;
 }
 
+.topLogo {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
 
 
