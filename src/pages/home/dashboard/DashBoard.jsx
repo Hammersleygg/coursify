@@ -3,10 +3,6 @@ import "./dashboard.css"
 export default function DashBoard() {
   return (
     <div className="dashboard">
-        <img 
-            className="dashboardImg"
-            src="https://250.cofc.edu/wp-content/uploads/2019/08/cofc-campus-banner.jpg" 
-            alt="" />
       <form className="dashboardForm">
         <div className="dashboardFormGroup">
            <label htmlFor="fileInput">
@@ -20,11 +16,11 @@ export default function DashBoard() {
                 autoFocus={true}
         />
         </div>
-        <div className="dashboardFromGroup">
+        <div className="dashboardFormGroup">
             <textarea 
                 placeholder="Leave a tip" 
                 type="text" 
-                className="dashbaordInput dashboardText"
+                className="dashboardInput dashboardText"
             ></textarea>
         </div>
         <button className="dashboardSubmit">Publish</button>

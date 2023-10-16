@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './topbar.css';
+import logo from '../../assets/logo.png';
 
 
 export default function TopBar() {
@@ -8,7 +9,7 @@ export default function TopBar() {
     return (
         <div className="top">
             <div className="topLeft">
-                <i className=" "></i> 
+                <img src={logo} alt="Coursify" className="topLogo" />
             </div>
 
             <div className="topCenter">

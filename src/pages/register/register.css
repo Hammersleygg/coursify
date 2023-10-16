@@ -4,12 +4,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(
-        rgba(225,225,225,0.5),
-        rgba(225,225,225,0.5)), 
-        url("https://th.bing.com/th/id/R.3b2c94efc5ac0ea83b9faea7a7631fe6?rik=Dq0e0jivyJVGaw&pid=ImgRaw&r=0");
-    background-size: cover;
-
 }
 
 .registerTitle{
@@ -35,9 +29,7 @@
 .registerButton{
     margin-top: 20px;
     cursor: pointer;
-    background-color: maroon;
     border: none;
-    color: white;
     border-radius: 10px;
     padding: 10px;
 }
@@ -46,7 +38,6 @@
     position: absolute;
     top: 60px;
     right: 20px;
-    background-color: maroon;
     cursor: pointer;
     border: none;
     padding: 10px;

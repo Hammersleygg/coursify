@@ -2,19 +2,11 @@
     padding-top: 50px;
 }
 
-.dashboardImg{
-    margin-left: 150px;
-    width: 70vw;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
 .dashboardForm{
     position: relative;
 }
 
-.dashboardFromGroup{
+.dashboardFormGroup{
    margin-left: 150px; 
    display: flex;
    align-items: center;
