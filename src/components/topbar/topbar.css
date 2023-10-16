@@ -1,11 +1,12 @@
 .top{
+    display: flex;
     width: 100%;
     height: 50px;
     background-color: white;
     position: sticky; 
     top: 0;
-    display: flex;
     align-items: center;
+    justify-content: center;
     font-family: 'Josefin Sans', sans-serif;
     z-index: 999;
 }
