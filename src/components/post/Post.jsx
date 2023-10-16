@@ -14,20 +14,12 @@ export default function Post() {
             <span className="postCat">US</span>
         </div>
         <span className="postTitle">
-            Gavin 
+            Gavin Says: 
         </span>
         <hr/>
         <span className="postDate">10/10/2023</span>
       </div>
       <p className="postDesc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Sunt eum suscipit esse! Modi nobis, dolores omnis earum dolore 
-            sed eius incidunt ab tenetur necessitatibus ipsam, cupiditate velit, 
-            quod aliquid illum.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Sunt eum suscipit esse! Modi nobis, dolores omnis earum dolore 
-            sed eius incidunt ab tenetur necessitatibus ipsam, cupiditate velit, 
-            quod aliquid illum.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Sunt eum suscipit esse! Modi nobis, dolores omnis earum dolore 
             sed eius incidunt ab tenetur necessitatibus ipsam, cupiditate velit, 

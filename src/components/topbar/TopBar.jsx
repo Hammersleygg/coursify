@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import logo from '../../assets/logo.png';
 import './topbar.css';
 
 
@@ -9,23 +8,22 @@ export default function TopBar() {
     return (
         <div className="top">
             <div className="topLeft">
-                <img src={logo} alt="coursify logo" className="topLogo" />
                 <i className=" "></i> 
             </div>
 
             <div className="topCenter">
                 <ul className="topList">
                     <li className="topListItem">
-                        <Link className="link" to="/">HOME</Link>
+                        <Link className="link" to="/">Home</Link>
                     </li>
                     <li className="topListItem">
-                        <Link className="link" to="/">ABOUT</Link>
+                        <Link className="link" to="/">About</Link>
                     </li>
                     <li className="topListItem">
-                        <Link className="link" to="/">CLASSES</Link>
+                        <Link className="link" to="/">Courses</Link>
                     </li>
                     <li className="topListItem">
-                        <Link className="link" to="/dashboard">DASHBOARD</Link>
+                        <Link className="link" to="/dashboard">Dashboard</Link>
                     </li>
                 </ul>
             </div>
