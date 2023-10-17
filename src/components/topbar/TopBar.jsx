@@ -9,20 +9,21 @@ export default function TopBar() {
     return (
     <div className="top">
         <div className="topLeft">
-          <img src={require('./logo.png')} alt="" />
-          <Link className="link" to="/">Home</Link>
+            <Link to="/">
+                <img src={require('./logo.png')} alt="" />
+            </Link>
         </div>
 
-            <div className="topCenter">
-                <ul className="topList">
-                    <li className="topListItem">
-                    </li>
+        <div className="topCenter">
+            <ul className="topList">
+                <li className="topListItem">
+                </li>
 
-                    <li className="topListItem">
-                        <Link className="link" to="/Account">Account</Link>
-                    </li>
-                </ul>
-            </div>
+                <li className="topListItem">
+                    <Link className="link" to="/Account">Account</Link>
+                </li>
+            </ul>
+        </div>
 
             {/* <div className="topRight">
                 {
