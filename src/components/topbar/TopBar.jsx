@@ -14,15 +14,8 @@ export default function TopBar() {
             </Link>
         </div>
 
-        <div className="topCenter">
-            <ul className="topList">
-                <li className="topListItem">
-                </li>
-
-                <li className="topListItem">
+        <div className="topRight">
                     <Link className="link" to="/Account">Account</Link>
-                </li>
-            </ul>
         </div>
 
             {/* <div className="topRight">
