@@ -11,6 +11,7 @@
 }
 
 .topLeft{
+    padding: 0px;
     display: flex;
     justify-content: left;
     cursor: pointer;
