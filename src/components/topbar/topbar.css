@@ -1,8 +1,6 @@
 .top{
     display: flex;
-    width: 100%;
-    height: 50px;
-    background-color: white;
+    padding: 0 20px;
     position: sticky; 
     top: 0;
     align-items: center;
@@ -19,13 +17,20 @@
     cursor: pointer;
 }
 
+.appName{
+    padding: auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0f0e0e;
+}
+
 .topCenter{
+    padding: auto;  
     display: flex;
     width: 100%;
     height: 50px;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Josefin Sans', sans-serif;
     z-index: 999;
 }
 
@@ -55,7 +60,7 @@
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: auto;
     list-style: none;
 }
 
@@ -72,12 +77,3 @@
     cursor: pointer;
     margin-left: 18px;
 }
-
-.topLogo {
-    height: 40px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-

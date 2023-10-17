@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './topbar.css';
-import logo from '../../assets/logo.png';
 
 
 export default function TopBar() {
     const user = false;
+
     return (
         <div className="top">
             <div className="topLeft">
-                <img src={logo} alt="Coursify" className="topLogo" />
+                <h1 className='appName'>Coursify</h1>
             </div>
 
             <div className="topCenter">
@@ -29,7 +29,7 @@ export default function TopBar() {
                 </ul>
             </div>
 
-            <div className="topRight">
+            {/* <div className="topRight">
                 {
                     user ? (
                         <img 
@@ -54,7 +54,7 @@ export default function TopBar() {
                 }
                 
                 <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
-            </div>
+            </div> */}
         </div>
     )
 }

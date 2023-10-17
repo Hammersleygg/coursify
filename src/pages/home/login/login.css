@@ -44,6 +44,6 @@
     right: 20px;
     cursor: pointer;
     border: none;
-    padding: 10px;
+    padding: auto;
     border-radius: 10px;
 }
