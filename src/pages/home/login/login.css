@@ -39,11 +39,15 @@
 }
 
 .loginRegisterButton{
-    position: absolute;
     top: 60px;
     right: 20px;
     cursor: pointer;
     border: none;
     padding: auto;
     border-radius: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.login {
+    font-family: 'Josefin Sans', sans-serif;
 }
