@@ -1,5 +1,4 @@
 import "./settings.css"
-import Sidebar from "../../../components/sidebar/Sidebar"
 export default function Settings() {
   return (
     <div className="settings">
@@ -11,9 +10,6 @@ export default function Settings() {
         <form className="settingsForm">
             <label> Profile Picture</label>
             <div className="settingsPP">
-                <img src="https://gricemarinelab.cofc.edu/images/logo/cofcblack.jpg" 
-                alt=""
-                />
                 <label htmlFor="fileInput">
                 <i className="settingsPPIcon fa-solid fa-house-chimney-user"></i>
                 </label>
@@ -28,7 +24,6 @@ export default function Settings() {
             <button className="settingsSubmit">Update</button>
         </form>
       </div>
-      <Sidebar/>
     </div>
   )
 }

@@ -5,10 +5,12 @@ import Account from "./pages/home/account/Account";
 import Settings from "./pages/home/settings/Settings";
 import Login from "./pages/home/login/Login";
 import Register from "./pages/register/Register";
+import './app.css'; 
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const user = false;
+  const user = true;
   return (
     <Router>
       <TopBar />

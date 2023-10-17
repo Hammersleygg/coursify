@@ -14,36 +14,9 @@ export default function TopBar() {
             </Link>
         </div>
 
-        <div className="topRight">
+         <div className="topRight">
                     <Link className="link" to="/Account">Account</Link>
         </div>
-
-            {/* <div className="topRight">
-                {
-                    user ? (
-                        <img 
-                            className="topImg"
-                            src="https://gricemarinelab.cofc.edu/images/logo/cofcblack.jpg"
-                            alt="" 
-                        />
-                    ) : (
-                      <ul className="topListItem">
-                        <li className="topListItem">
-                            <Link className="link" to="/login">
-                                LOGIN
-                            </Link>
-                        </li>
-                        <li className="topListItem">
-                            <Link className="link" to="/register">
-                                REGISTER
-                            </Link>
-                        </li>
-                      </ul>
-                    )
-                }
-                
-                <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
-            </div> */}
-        </div>
+    </div>
     )
 }

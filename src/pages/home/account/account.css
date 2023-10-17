@@ -1,22 +1,30 @@
-.dashboard{
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 50px;
 }
 
-.dashboardForm{
-    position: relative;
+.accountForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
 }
 
-.dashboardFormGroup{
-   margin-left: 150px; 
-   display: flex;
-   align-items: center;
+.accountFormGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-.dashboardIcon{
+.accountIcon {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 1px solid;
+    border: 1px solid grey;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,33 +33,36 @@
     cursor: pointer;
 }
 
-.dashboardInput{
-    font-size: 30px;
-    border: none;
-    padding: 20px;
-    width: 70vw;
+.accountInput {
+    font-size: 16px;
+    border: 1px solid grey;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.dashboardInput:focus{
+.accountInput:focus {
     outline: none;
 }
 
-.dashboardText{
-   font-size: 20px; 
-   height: 100vw;
-   width: 65vw;
-   border: none;
+.accountText {
+    font-size: 16px;
+    height: 100px;
+    width: 100%;
+    border: 1px solid grey;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.dashboardSubmit{
-    position: absolute;
-    top: 20px;
-    right: 50px;
+.accountSubmit {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
     color: white;
-    background-color: maroon;
+    background-color: rgb(140, 56, 56);
     padding: 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
+    width: 100%;
+    max-width: 200px;
 }
