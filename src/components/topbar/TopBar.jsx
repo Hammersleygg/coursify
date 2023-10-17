@@ -4,27 +4,22 @@ import './topbar.css';
 
 
 export default function TopBar() {
-    const user = false;
+    // const user = false;
 
     return (
-        <div className="top">
-            <div className="topLeft">
-                <h1 className='appName'>Coursify</h1>
-            </div>
+    <div className="top">
+        <div className="topLeft">
+          <img src={require('./logo.png')} alt="" />
+          <Link className="link" to="/">Home</Link>
+        </div>
 
             <div className="topCenter">
                 <ul className="topList">
                     <li className="topListItem">
-                        <Link className="link" to="/">Home</Link>
                     </li>
+
                     <li className="topListItem">
-                        <Link className="link" to="/about">About</Link>
-                    </li>
-                    <li className="topListItem">
-                        <Link className="link" to="/">Courses</Link>
-                    </li>
-                    <li className="topListItem">
-                        <Link className="link" to="/dashboard">Dashboard</Link>
+                        <Link className="link" to="/Account">Account</Link>
                     </li>
                 </ul>
             </div>

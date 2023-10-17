@@ -1,29 +1,29 @@
-import "./dashboard.css"
+import "./account.css"
 
-export default function DashBoard() {
+export default function Account() {
   return (
-    <div className="dashboard">
-      <form className="dashboardForm">
-        <div className="dashboardFormGroup">
+    <div className="account">
+      <form className="accountForm">
+        <div className="accountFormGroup">
            <label htmlFor="fileInput">
-            <i className="dashboardIcon fas fa-plus"></i>
+            <i className="accountIcon fas fa-plus"></i>
            </label>
            <input type="file" id="fileInput" style={{display: "none"}} />
            <input 
                 type="text" 
                 placeholder="Title" 
-                className="dashboardInput" 
+                className="accountInput" 
                 autoFocus={true}
         />
         </div>
-        <div className="dashboardFormGroup">
+        <div className="accountFormGroup">
             <textarea 
                 placeholder="Leave a tip" 
                 type="text" 
-                className="dashboardInput dashboardText"
+                className="accountInput accountText"
             ></textarea>
         </div>
-        <button className="dashboardSubmit">Publish</button>
+        <button className="accountSubmit">Publish</button>
       </form>
     </div>
   )

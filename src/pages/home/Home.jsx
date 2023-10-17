@@ -1,4 +1,4 @@
-// import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 // import Header from '../../components/header/Header';
 // import Posts from '../../components/posts/Posts';
 // import Sidebar from '../../components/sidebar/Sidebar';
@@ -7,7 +7,7 @@ import './home.css';
 export default function Home() {
   return (
     <>
-      {/* <SearchBar /> */}
+      <SearchBar />
       <div className='home'>
         {/* <Posts /> */}
         {/* <Sidebar /> */}
