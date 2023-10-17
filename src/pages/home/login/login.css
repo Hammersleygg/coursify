@@ -4,18 +4,17 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(
-        rgba(225,225,225,0.5),
-        rgba(225,225,225,0.5)), 
-
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .loginTitle{
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .loginForm{
-    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.1);
+    margin: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -35,19 +34,19 @@
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    padding: 10px;
-}
-
-.loginRegisterButton{
-    top: 60px;
-    right: 20px;
-    cursor: pointer;
-    border: none;
     padding: auto;
-    border-radius: 10px;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
-.login {
-    font-family: 'Josefin Sans', sans-serif;
-}
+.loginButtonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .loginLoginText {
+    margin-top: 30px;
+  }
+  
+  .loginLoginButton {
+    margin-top: 10px;
+  }
