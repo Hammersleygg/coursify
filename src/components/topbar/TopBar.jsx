@@ -4,7 +4,11 @@ import './topbar.css';
 
 
 export default function TopBar() {
-    // const user = false;
+    const [showAccountMenu, setShowAccountMenu] = React.useState(false);
+
+    const handleSignOutClick = () => {
+        setShowAccountMenu(false);
+    }
 
     return (
     <div className="top">
@@ -15,7 +19,16 @@ export default function TopBar() {
         </div>
 
          <div className="topRight">
-                    <Link className="link" to="/Account">Account</Link>
+            {showAccountMenu ? (
+                <div className="accountMenu">
+                    <Link className="link" to="/Account">Account Home</Link>
+                    <button onClick={handleSignOutClick}>Sign Out</button>
+                </div>
+            ) : (
+                <button className='accountButton' onClick={() => setShowAccountMenu(true)}>
+                 Account
+                 </button>
+            )}
         </div>
     </div>
     )
