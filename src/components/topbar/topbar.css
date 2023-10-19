@@ -1,8 +1,9 @@
 .top{
-    background-color: rgba(255, 255, 255, 0.893);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
     position: sticky; 
     top: 0;
     align-items: center;
@@ -10,7 +11,9 @@
     z-index: 999;
 }
 
-.topLeft{
+.topLeft img{
+    height: 50px;
+    margin: 5px;
     padding: 0px;
     display: flex;
     justify-content: left;
