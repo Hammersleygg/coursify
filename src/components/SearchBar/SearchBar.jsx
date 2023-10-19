@@ -16,9 +16,11 @@ export default function SearchBar() {
     };
 
     return (
-        <div className="search-bar">
-            <input type="text" placeholder="Search for your school..." value={query} onChange={handleQueryChange} />
-            <button onClick={handleSearch}>Search</button>
+        <div className="search-bar-container">
+            <div className="search-bar">
+                <input type="text" placeholder="Search for your school..." value={query} onChange={handleQueryChange} />
+                <button onClick={handleSearch}>Search</button>
+            </div>
             {results.length > 0 && (
                 <ul className="search-results">
                     {results.map((result) => (
