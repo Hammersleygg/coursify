@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import {createUserWithEmailAndPassword} from "firebase/auth"
 import { auth } from "../../firebase-config";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
   const [registerUserName, setRegisterUserName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -16,12 +18,15 @@ export default function Register() {
    * @return {Promise<void>} A promise that resolves when the user registration is successful or rejects with an error message if there is an error.
    */
   const register = async (e)=> {
+    console.log("Register function called");
     e.preventDefault(); //this prevents the page from refreshing
     try {
     const user = await createUserWithEmailAndPassword(auth,registerEmail,registerPassword)
     console.log(user);
+    alert("User created successfully! Please log in.")
+    navigate("/login");
     } catch(error){
-      console.log(error.message);
+      console.error('Error creating user:', error.message);
     }
   }
 
@@ -51,7 +56,7 @@ export default function Register() {
               setRegisterPassword(e.target.value)} 
             />
             <button type="submit" className="registerButton">Register</button>
-      </form>
+        </form>
       <div className="registerLoginText"> Already have an account?</div>
       <button  className="registerLoginButton">
         <Link className= "link" to="/login">Login</Link>
