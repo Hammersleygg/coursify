@@ -1,0 +1,51 @@
+.delete-account-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+}
+
+.delete-account-modal .modal-content h2 {
+  font-size: 24px;
+  color: #800000; /* Maroon */
+}
+
+.delete-account-modal .modal-content p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-button, .cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.confirm-button {
+  background-color: #FF0000; /* Red */
+  color: #fff;
+}
+
+.cancel-button {
+  background-color: #ddd; /* Light Gray */
+  color: #333;
+}
+
+.confirm-button:hover, .cancel-button:hover {
+  background-color: #600000; /* Darker Maroon on hover */
+}
