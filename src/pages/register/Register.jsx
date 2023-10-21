@@ -9,37 +9,52 @@ export default function Register() {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
 
-  const register = async ()=> {
+  /**
+   * Registers a user by creating a new account with the provided email and password.
+   *
+   * @param {Event} e - The event object representing the form submission event.
+   * @return {Promise<void>} A promise that resolves when the user registration is successful or rejects with an error message if there is an error.
+   */
+  const register = async (e)=> {
+    e.preventDefault(); //this prevents the page from refreshing
     try {
     const user = await createUserWithEmailAndPassword(auth,registerEmail,registerPassword)
     console.log(user);
     } catch(error){
       console.log(error.message);
     }
-
   }
 
   return (
     <div className="register">
         <span className="registerTitle">Register</span>
-      <form className="registerForm">
+        <form className="registerForm" onSubmit={register}>
             <label>Username</label>
-            <input type="text" className="registerInput" placeholder="Enter your username" onChange={(event) => {
-              setRegisterUserName(event.target.value);
-            }}/>
+            <input type="text" 
+            className="registerInput" 
+            placeholder="Enter your username" 
+            onChange={(e) => 
+              setRegisterUserName(e.target.value)}
+           />
             <label>Email</label>
-            <input type="text" className="registerInput" placeholder="Enter your email" onChange={(event) => {
-              setRegisterEmail(event.target.value);
-            }}/>
+            <input type="text" 
+            className="registerInput" 
+            placeholder="Enter your email" 
+            onChange={(e) => 
+              setRegisterEmail(e.target.value)}
+            />
             <label>Password</label>
-            <input type="password" className="registerInput" placeholder="Enter your password" onChange={(event) => {
-              setRegisterPassword(event.target.value);
-            }} />
-            <button onClick={register}className="registerButton">Register</button>
+            <input type="password" 
+            className="registerInput" 
+            placeholder="Enter your password" 
+            onChange={(e) => 
+              setRegisterPassword(e.target.value)} 
+            />
+            <button type="submit" className="registerButton">Register</button>
       </form>
       <div className="registerLoginText"> Already have an account?</div>
       <button  className="registerLoginButton">
-      <Link to="/login">Login</Link>
+        <Link className= "link" to="/login">Login</Link>
       </button>
     </div>
   )
