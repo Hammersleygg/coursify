@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './topbar.css';
+import { signOut,onAuthStateChanged } from 'firebase/auth';
+import { auth } from "../../firebase-config";
+
 
 
 export default function TopBar() {
@@ -9,6 +12,11 @@ export default function TopBar() {
     const handleSignOutClick = () => {
         setShowAccountMenu(false);
     }
+
+    const logout = async () => {
+        await signOut(auth);
+      };
+    
 
     return (
     <div className="top">
@@ -22,7 +30,7 @@ export default function TopBar() {
             {showAccountMenu ? (
                 <div className="accountMenu">
                     <Link className="link" to="/Account">Account Home</Link>
-                    <button onClick={handleSignOutClick}>Sign Out</button>
+                    <button onClick={logout}>Sign Out</button>
                 </div>
             ) : (
                 <button className='accountButton' onClick={() => setShowAccountMenu(true)}>

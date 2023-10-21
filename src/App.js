@@ -8,9 +8,16 @@ import Register from "./pages/register/Register";
 import './app.css'; 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import {auth} from "./firebase-config"
+
+
 
 function App() {
   const user = false;
+
+  
+ 
   return (
     <Router>
       <TopBar />
