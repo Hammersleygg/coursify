@@ -55,5 +55,5 @@
   }
   
   .search-bar button:hover {
-    background-color: #600000; /* Darker Maroon on hover */
+    background-color: maroon; /* Darker Maroon on hover */
   }

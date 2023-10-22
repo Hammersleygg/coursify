@@ -46,7 +46,17 @@ export default function TopBar() {
                     <Link className="link" to="/settings" onClick={() => setShowAccountMenu(false)}>
                         Settings
                     </Link>
-                    <button onClick={logout}>Sign Out</button>
+                    <Link 
+                        className="link" 
+                        to="#" 
+                        onClick={(e) => {
+                            e.preventDefault(); 
+                            logout(); 
+                            setShowAccountMenu(false);
+                        }}
+                    >
+                        Sign Out
+                    </Link>
                 </div>
             )}
         </div>
