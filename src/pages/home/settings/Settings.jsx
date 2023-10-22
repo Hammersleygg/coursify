@@ -18,7 +18,7 @@ export default function Settings() {
     // This is just a placeholder function
     console.log('Account deleted');
     // Close the modal after deletion (you can add more logic here)
-    setDeleteAccountModalOpen(false);
+    setDeleteAccountModalOpen(false); 
   }
 
   return (

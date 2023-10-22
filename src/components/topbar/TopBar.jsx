@@ -36,15 +36,15 @@ export default function TopBar() {
                 >
                     Account
                 </button>
-                <button className='settingsButton' onClick={goToSettings}>
-                    Settings
-                </button>
             </div>
 
             {showAccountMenu && (
                 <div className="accountMenu">
                     <Link className="link" to="/Account">
                         Account Home
+                    </Link>
+                    <Link className="link" to="/settings" onClick={() => setShowAccountMenu(false)}>
+                        Settings
                     </Link>
                     <button onClick={logout}>Sign Out</button>
                 </div>
