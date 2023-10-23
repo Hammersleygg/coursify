@@ -1,8 +1,9 @@
+/* Account.css */
 .account {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    padding: 50px 0;
 }
 
 .accountForm {
@@ -11,52 +12,70 @@
     align-items: center;
     width: 80%;
     max-width: 600px;
+    background-color: #ffffff9f;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.accountFormGroup {
+.accountGroup {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-    width: 100%;
+    order: 1;
 }
 
 .accountIcon {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 1px solid grey;
+    border: 1px solid #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    color: grey;
+    color: #ccc;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    order: 2;
+    align-self: flex-end;
 }
 
-.accountInput {
+.accountIcon:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.accountTitle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    order: 1;
+}
+
+.accountInput, .accountText {
     font-size: 16px;
-    border: 1px solid grey;
+    border: 1px solid #ccc;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    order: 2;
 }
 
-.accountInput:focus {
+.accountInput:focus, .accountText:focus {
     outline: none;
+    border-color: #555;
 }
 
-.accountText {
-    font-size: 16px;
-    height: 100px;
-    width: 100%;
-    border: 1px solid grey;
-    padding: 10px;
-    box-sizing: border-box;
+.accountFormGroup textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
 }
 
 .accountSubmit {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-    color: white;
+    color: #fff;
     background-color: rgb(140, 56, 56);
     padding: 10px;
     border: none;
@@ -65,4 +84,11 @@
     font-size: 16px;
     width: 100%;
     max-width: 200px;
+    transition: background-color 0.3s;
+    order: 1;
+    align-self: center;
+}
+
+.accountSubmit:hover {
+    background-color: rgb(100, 40, 40); /* Slightly darker shade on hover */
 }

@@ -1,0 +1,43 @@
+.website-description {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: 10px;
+}
+
+.website-description h2 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+}
+
+.website-description p {
+    font-size: 18px;
+    color: #666;
+}
+
+.website-description button {
+    background-color: #800000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.website-description button:hover {
+    background-color: #600000; /* Darker Maroon on hover */
+}
+
+
+.website-description {
+    background-color: #ffffff9f; /* Adjust the alpha value for opacity */
+    /* ... (other styles) */
+}
+
+

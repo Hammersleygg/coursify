@@ -40,7 +40,7 @@ export default function Login() {
 
   return (
     <div className="login">
-        <span className="loginTitle">Login</span>
+        <h1 className="loginTitle">Login</h1>
       <form className="loginForm">
             <label>Email</label>
             <input type="text" className="loginInput" placeholder="Enter your email" onChange={(event) => {

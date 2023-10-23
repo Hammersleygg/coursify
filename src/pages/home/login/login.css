@@ -1,5 +1,5 @@
 .login{
-    height: calc(100vh - 50px);
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -9,25 +9,36 @@
 
 .loginTitle{
     font-size: 45px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: maroon;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .loginForm{
-    background-color: white;
+    background-color: #ffffff9f;
     padding: 20px;
     box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.1);
     margin: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
 }
 
 .loginForm > label{
     margin: 10px 0;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .loginInput{
-    padding: 10px;
-    background-color: white;
-    border: none;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
 }
 
 .loginButton{
@@ -35,19 +46,24 @@
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    padding: auto;
+    padding: 12px 30px;
+    background-color: #800000;
+    color: #fff;
+    transition: background-color 0.3s;
 }
 
-.loginButtonWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.loginButton:hover {
+    background-color: #600000; /* Darker shade on hover */
+}
   
-  .loginLoginText {
-    margin-top: 30px;
-  }
+.loginLoginText {
+    margin-top: 20px;
+    font-size: 16px;
+}
   
-  .loginLoginButton {
+.loginLoginButton {
     margin-top: 10px;
-  }
+    text-decoration: none;
+    color: #800000;
+    font-weight: bold;
+}

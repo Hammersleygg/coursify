@@ -8,7 +8,7 @@
   
   .search-bar input {
     width: 300px;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid #ccc; /* Add a border */
     border-radius: 9px; /* Add rounded corners */
     font-size: 16px;
@@ -44,7 +44,7 @@
   }
   
   .search-bar button {
-    background-color: rgb(50, 49, 49); /* Maroon */
+    background-color: rgb(50, 49, 49);
     color: #fff; /* Text color */
     border: none;
     border-radius: 9px; /* Rounded corners */
