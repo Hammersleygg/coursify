@@ -14,7 +14,7 @@ import {auth} from "./firebase-config"
 
 
 function App() {
-  const user = true;
+  
 
   
  
@@ -23,10 +23,10 @@ function App() {
       <TopBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/register" element={user ? <Home/> : <Register />} />
-        <Route path="/login" element={user ? <Home/> : <Login />} />
-        <Route path="/Account" element={user ? <Account/> : <Register />} />
-        <Route path="/settings" element={user ? <Settings/> : <Register />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/Account" element={<Register />} />
+        <Route path="/settings" element={<Register />} />
         <Route path="/post/:postId" element={<Single />} />
       </Routes>
     </Router>
