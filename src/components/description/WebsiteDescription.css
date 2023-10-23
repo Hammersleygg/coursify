@@ -1,12 +1,9 @@
-.website-description {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 500px;
-    margin: 10px;
+
+.infographic {
+    max-width: 100%;
+    height: auto;
 }
+
 
 .website-description h2 {
     font-size: 28px;
