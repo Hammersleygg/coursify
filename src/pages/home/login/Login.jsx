@@ -3,6 +3,7 @@ import "./login.css"
 import { useState } from "react";
 import {signInWithEmailAndPassword,onAuthStateChanged} from "firebase/auth"
 import { auth } from "../../../firebase-config";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
 
@@ -16,21 +17,34 @@ export default function Login() {
     setUser(currentUser);
   });
 
+  const navigate = useNavigate();
+  //const usersCollectionRef = collection(db, "users")
+
+  /**
+   * Registers a user by creating a new account with the provided email and password.
+   *
+   * @param {Event} e - The event object representing the form submission event.
+   * @return {Promise<void>} A promise that resolves when the user registration is successful or rejects with an error message if there is an error.
+   */
+  const login = async (e)=> {
+    console.log("Login function called");
+    e.preventDefault(); //this prevents the page from refreshing
+    try {
+    const user = await signInWithEmailAndPassword(auth,loginEmail,loginPassword)
+    console.log(user);
+    alert("User Logged in successfully")
+    navigate("/Account2");
+    } catch(error){
+      console.error('Error Logging in user:', error.message);
+    }
+  }
+
 
 
 
  
   
-  const login = async () => {
-
-      try {
-      const user = await signInWithEmailAndPassword(auth,loginEmail,loginPassword)
-      console.log(user);
-      } catch(error){
-        console.log(error.message);
-      }
-  
-    }
+ 
     
 
 
