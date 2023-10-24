@@ -26,6 +26,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Account" element={<Register />} />
+        <Route path="/Account2" element={<Account />} />
         <Route path="/settings" element={<Register />} />
         <Route path="/post/:postId" element={<Single />} />
       </Routes>
