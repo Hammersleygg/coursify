@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './topbar.css';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase-config';
+import { ReactComponent as SmallLogo } from '../../assets/SmallLogo.svg';
 
 export default function TopBar() {
     const [showAccountMenu, setShowAccountMenu] = useState(false);
@@ -25,7 +26,7 @@ export default function TopBar() {
         <div className="top">
             <div className="topLeft">
                 <Link to="/">
-                    <img src={require('./logo.png')} alt="" />
+                    <SmallLogo className='SmallLogo'/>
                 </Link>
             </div>
 

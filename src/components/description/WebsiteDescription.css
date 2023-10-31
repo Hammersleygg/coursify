@@ -1,33 +1,15 @@
 
-.infographic {
-    max-width: 100%;
+.website-description {
+    width: 100%;
     height: auto;
 }
+
 
 .LargeLogo {
     max-width: 100%;
     height: auto;
+    max-width: 600px;
 }
 
-.website-description button {
-    background-color: #800000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.website-description button:hover {
-    background-color: #600000; /* Darker Maroon on hover */
-}
-
-
-.website-description {
-    background-color: #ffffff9f; /* Adjust the alpha value for opacity */
-    /* ... (other styles) */
-}
 
 

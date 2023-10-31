@@ -1,9 +1,9 @@
-body {
+/* body {
   background-image: url('/src/assets/school_img.jpg');
-  background-size: cover; /* Maintain aspect ratio and cover the entire viewport */
-  background-position: center; /* Center the image within the viewport */
-  background-attachment: fixed; /* Keep the background fixed */
-  height: 100vh; /* Set the height to 100% of the viewport height */
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  height: 100vh; 
 }
 
 .modal-background {
@@ -12,6 +12,28 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px); /* Adjust the blur level as needed */
-  z-index: 999; /* Place it behind the modal */
+  backdrop-filter: blur(5px); 
+  z-index: 999; 
+} */
+
+body {
+  height: 100vh;
+  position: relative; /* This ensures the pseudo-element is relative to the body */
+  margin: 0; /* This is to remove any default margins */
+  overflow: hidden; /* To ensure the body doesn't overflow */
+}
+
+body::before {
+  content: "";
+  background-image: url('/src/assets/school_img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute; /* Absolutely position it to cover the body */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8; /* Adjust opacity here (e.g., 0.7 is 70% opacity) */
+  z-index: -1; /* This ensures the background is behind the content */
 }
