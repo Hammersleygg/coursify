@@ -4,16 +4,9 @@
     height: auto;
 }
 
-
-.website-description h2 {
-    font-size: 28px;
-    color: #333;
-    margin: 0;
-}
-
-.website-description p {
-    font-size: 18px;
-    color: #666;
+.LargeLogo {
+    max-width: 100%;
+    height: auto;
 }
 
 .website-description button {
