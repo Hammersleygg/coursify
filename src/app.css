@@ -18,14 +18,14 @@
 
 body {
   height: 100vh;
-  position: relative; /* This ensures the pseudo-element is relative to the body */
-  margin: 0; /* This is to remove any default margins */
-  overflow: hidden; /* To ensure the body doesn't overflow */
+  position: relative; 
+  margin: 0; 
+  overflow: hidden; 
 }
 
 body::before {
   content: "";
-  background-image: url('/src/assets/school_img.jpg');
+  background-image: url('/src/assets/CoursifyBackground.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
