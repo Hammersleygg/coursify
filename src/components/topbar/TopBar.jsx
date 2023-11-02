@@ -41,7 +41,7 @@ export default function TopBar() {
 
             {showAccountMenu && (
                 <div className="accountMenu">
-                    <Link className="link" to="/Account">
+                    <Link className="link" to="/Account" onClick={() => setShowAccountMenu(false)}>
                         Account Home
                     </Link>
                     <Link className="link" to="/settings" onClick={() => setShowAccountMenu(false)}>
