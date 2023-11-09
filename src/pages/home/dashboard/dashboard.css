@@ -1,0 +1,65 @@
+.dashboard{
+    padding-top: 50px;
+}
+
+.dashboardImg{
+    margin-left: 150px;
+    width: 70vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.dashboardForm{
+    position: relative;
+}
+
+.dashboardFromGroup{
+   margin-left: 150px; 
+   display: flex;
+   align-items: center;
+}
+
+.dashboardIcon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: grey;
+    cursor: pointer;
+}
+
+.dashboardInput{
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+}
+
+.dashboardInput:focus{
+    outline: none;
+}
+
+.dashboardText{
+   font-size: 20px; 
+   height: 100vw;
+   width: 65vw;
+   border: none;
+}
+
+.dashboardSubmit{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    background-color: maroon;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
