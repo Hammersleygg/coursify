@@ -1,14 +1,20 @@
 /* Update the search bar styling */
+.search-bar-container {
+  background-color:whitesmoke;
+}
+
+
 .search-bar {
     display: flex;
     justify-content: center;
-    padding: 15px;
+    padding: 10px;
     position: relative;
   }
   
   .search-bar input {
     width: 350px;
     padding: 5px;
+    margin: 8px;
     border: 2px solid #ccc; /* Add a border */
     border-radius: 9px; /* Add rounded corners */
     font-size: 16px;
@@ -42,10 +48,9 @@
   .search-bar button {
     background-color: rgb(50, 49, 49);
     color: #fff; /* Text color */
-    border: none;
     border-radius: 9px; /* Rounded corners */
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
   }
