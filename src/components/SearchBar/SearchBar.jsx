@@ -58,6 +58,7 @@ export default function SearchBar() {
     };
 
     return (
+        <div className='search-container'>
             <div className="search-bar">
                 <div className="input-button-container">
                 <input type="text" placeholder="Search for a class (or type 'all' for every class)..." value={query} onChange={handleQueryChange} />
@@ -67,6 +68,7 @@ export default function SearchBar() {
                 <p className={`not-found-message`}>Sorry, course not found....</p>
             ) : (
                 results.length > 0 && (
+                    <div search-results-container>
                     <ul className="search-results">
                         {results.map((classInfo, index) => (
                             <li key={index} onClick={() => handleClassClick(classInfo)}>
@@ -76,6 +78,7 @@ export default function SearchBar() {
                             </li>
                         ))}
                     </ul>
+                </div>
                 )
             )}
             {selectedClass && (
@@ -88,6 +91,7 @@ export default function SearchBar() {
                     </div>
                 </div>
             )}
+        </div>
         </div>
     );
 }

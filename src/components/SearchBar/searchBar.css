@@ -1,25 +1,19 @@
-
-.search-bar {
-    display: flex;
-  }
-  
-  .search-bar input {
-    width: 250px;
-    padding: 8px;
-    border: 1px solid #000000;
-    border-radius: 20px; /* Add rounded corners */
-    font-size: 12px;
-  }
-
-  .input-button-container {
-    display: flex;
-    align-items: center; /* Align vertically */
-    width: 250px;
-    border: 1px solid #000000; /* Border around the entire container */
-    border-radius: 20px;
-    overflow: hidden; /* Ensures the button fits within the border radius */
+.search-bar input {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 20px; /* Add rounded corners */
+  font-size: 12px;
 }
 
+.input-button-container {
+  display: flex;
+  align-items: center; /* Align vertically */
+  width: 250px;
+  border: 1px solid #000000; /* Border around the entire container */
+  border-radius: 20px;
+  overflow: hidden; /* Ensures the button fits within the border radius */
+}
 
 .input-button-container input {
   flex-grow: 1;
@@ -30,7 +24,6 @@
   font-size: 12px;
 }
 
-
 .input-button-container button {
   background-color: lightgrey;
   padding: 10px 12px; /* Adjust as needed */
@@ -40,63 +33,65 @@
   cursor: pointer;
 }
 
+.search-results-container {
+  height: 250px;
+  width: 250px;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
 
+.search-results {
+  background-color: #fff;
+  padding: 10px 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-  
-  /* Update the search results styling */
-  .search-results {
-    background-color: #fff;
-    padding: 10px 0;
-    margin: 10px 0;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .search-results li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Add smooth hover transition */
-  }
-  
-  .search-results li:last-child {
-    border-bottom: none;
-  }
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add smooth hover transition */
+}
 
-  .search-results li:hover {
-    background-color: rgba(61, 60, 60, 0.396)/* Slightly darker background on hover */
-  }
-  
-  .search-bar button {
-    color: #000000; /* Text color */
-    font-family: 'appleberry';
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .search-bar button:hover {
-    color: #fff; /* Text color on hover */
-    background-color: maroon; /* Darker Maroon on hover */
-  }
+.search-results li:last-child {
+  border-bottom: none;
+}
 
-  .not-found-message{
-    background-color: #fff;
-    padding: 10px 0;
-    margin: 10px 0;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
+.search-results li:hover {
+  background-color: rgba(61, 60, 60, 0.396)/* Slightly darker background on hover */
+}
 
-  /* Modal container */
+.search-bar button {
+  color: #000000; /* Text color */
+  font-family: 'appleberry';
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar button:hover {
+  color: #fff; /* Text color on hover */
+  background-color: maroon; /* Darker Maroon on hover */
+}
+
+.not-found-message {
+  background-color: #fff;
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal container */
 .modal-container {
   position: fixed;
   top: 0;
