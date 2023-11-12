@@ -25,7 +25,8 @@ body {
 
 body::before {
   content: "";
-  background-image: url('/src/assets/CoursifyBackground2.png');
+  background-color: rgb(255, 200, 0);
+  /* background-image: url('/src/assets/CoursifyBackground2.png'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
