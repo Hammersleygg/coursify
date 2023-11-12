@@ -7,29 +7,44 @@ import Login from "./pages/home/login/Login";
 import Register from "./pages/register/Register";
 import './app.css'; 
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
 import {auth} from "./firebase-config"
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <TransitionGroup>
+      <CSSTransition
+        key={location.pathname} 
+        timeout={300} 
+        classNames="fade" 
+      >
+        <Routes location={location}> // Pass location to the Routes component
+          <Route exact path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/Account" element={<Register />} />
+          <Route path="/Account2" element={<Account />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/post/:postId" element={<Single />} />
+        </Routes>
+      </CSSTransition>
+    </TransitionGroup>
+  );
+}
+
 
 
 
 function App() {
   
-
-  
- 
   return (
     <Router>
       <TopBar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/Account" element={<Register />} />
-        <Route path="/Account2" element={<Account />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/post/:postId" element={<Single />} />
-      </Routes>
+      <AnimatedRoutes />
     </Router>
   );
 }
