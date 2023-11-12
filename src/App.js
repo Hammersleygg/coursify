@@ -8,7 +8,6 @@ import Register from "./pages/register/Register";
 import './app.css'; 
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { useState } from "react";
 import {auth} from "./firebase-config"
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
