@@ -61,7 +61,8 @@ export default function SearchBar() {
         <div className='search-container'>
             <div className="search-bar">
                 <div className="input-button-container">
-                <input type="text" placeholder="Search for a class (or type 'all' for every class)..." value={query} onChange={handleQueryChange} />
+                <input type="text" placeholder="Search for a class (or type 'all' for every class)..." value={query} onChange={handleQueryChange}
+                onKeyDown={(e) => e.key === 'Enter' && handleSearch()} />
                 <button onClick={handleSearch}>Search</button>
             </div>
             {notFound ? (
