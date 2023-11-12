@@ -8,11 +8,11 @@
   
   .search-bar input {
     width: 350px;
-    padding: 5px;
-    margin: 8px;
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 15px; /* Add rounded corners */
-    font-size: 16px;
+    padding: 8px;
+    margin: 6px;
+    border: 2px solid #000000;
+    border-radius: 20px; /* Add rounded corners */
+    font-size: 14px;
     outline: none;
   }
   
@@ -45,16 +45,14 @@
   }
   
   .search-bar button {
-    background-color: rgb(50, 49, 49);
-    color: #fff; /* Text color */
-    border-radius: 9px; /* Rounded corners */
-    padding: 5px 10px 5px 10px;
-    font-size: 14px;
+    color: #000000; /* Text color */
+    font-size: 12px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
   }
   
   .search-bar button:hover {
+    color: #fff; /* Text color on hover */
     background-color: maroon; /* Darker Maroon on hover */
   }
 
