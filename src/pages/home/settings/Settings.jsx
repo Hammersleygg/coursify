@@ -26,7 +26,6 @@ export default function Settings() {
       <div className="settingsWrapper">
         <div className="settingTitle">
             <span className="settingsUpdateTitle">Update Your Account</span>
-            <span className="settingsDeleteTitle" onClick={handleDeleteAccount}>Delete Account</span>
         </div>
         <form className="settingsForm">
             <label>Profile Picture</label>
@@ -41,9 +40,9 @@ export default function Settings() {
             <label>Email</label>
             <input type="text" placeholder="user@g.cofc.edu" />
             <label>Password</label>
-            <input type="password" placeholder="***"/>
-
+            <input type="password" placeholder="**********"/>
             <button className="settingsSubmit">Update</button>
+            <span className="settingsDeleteTitle" onClick={handleDeleteAccount}>Delete Account</span>
         </form>
       </div>
 
