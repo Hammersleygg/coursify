@@ -6,18 +6,21 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
   z-index: 1000;
 }
 
 .delete-account-modal .modal-content h2 {
+  font-family: 'appleberry';
   font-size: 24px;
-  color: #800000; /* Maroon */
+  color: #FF0000; /* Maroon */
 }
 
 .delete-account-modal .modal-content p {
-  font-size: 18px;
+  font-family: 'josefin sans';
+  margin-top: 6px;
+  font-size: 16px;
   color: #333;
   margin-bottom: 20px;
 }
@@ -29,10 +32,10 @@
 }
 
 .confirm-button, .cancel-button {
-  padding: 10px 30px;
+  padding: 8px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }

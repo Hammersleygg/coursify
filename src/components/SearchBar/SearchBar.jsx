@@ -73,14 +73,13 @@ export default function SearchBar() {
                     <ul className="search-results">
                         {results.map((classInfo, index) => (
                             <li key={index} onClick={() => handleClassClick(classInfo)}>
-                                <p>Class Name: {classInfo['Class Name']}</p>
-                                <p>Class Number: {classInfo['Class Number']}</p>
-                                <p>Tips: {classInfo['Tips']}</p>
+                                <p>Course Name: {classInfo['Class Name']}</p>
+                                <p>Course Number: {classInfo['Class Number']}</p>
                             </li>
                         ))}
                     </ul>
                 </div>
-                )
+                ) 
             )}
             {selectedClass && (
                 <div className="modal-container">

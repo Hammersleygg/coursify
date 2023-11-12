@@ -1,3 +1,4 @@
+
 .search-bar input {
   width: 250px;
   padding: 8px;
@@ -9,7 +10,7 @@
 .input-button-container {
   display: flex;
   align-items: center; /* Align vertically */
-  width: 250px;
+  width: 350px;
   border: 1px solid #000000; /* Border around the entire container */
   border-radius: 20px;
   overflow: hidden; /* Ensures the button fits within the border radius */
@@ -19,8 +20,7 @@
   flex-grow: 1;
   padding: 8px;
   margin: 0; /* Reset any default margin */
-  border: none; /* The container has the border */
-  border-radius: 0; /* No rounded corners */
+  border-radius: 20; 
   font-size: 12px;
 }
 
@@ -41,6 +41,8 @@
 }
 
 .search-results {
+  margin-top: 20px;
+  margin-bottom: auto;
   background-color: #fff;
   padding: 10px 0;
   width: 100%;
