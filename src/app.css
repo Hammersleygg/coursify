@@ -16,6 +16,13 @@
   z-index: 999; 
 } */
 
+@font-face {
+  font-family: 'appleberry';
+  src: url('./assets/fonts/appleberry.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   height: 100vh;
   position: relative; 

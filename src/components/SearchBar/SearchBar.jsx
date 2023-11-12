@@ -59,8 +59,10 @@ export default function SearchBar() {
 
     return (
             <div className="search-bar">
+                <div className="input-button-container">
                 <input type="text" placeholder="Search for a class (or type 'all' for every class)..." value={query} onChange={handleQueryChange} />
                 <button onClick={handleSearch}>Search</button>
+            </div>
             {notFound ? (
                 <p className={`not-found-message`}>Sorry, course not found....</p>
             ) : (

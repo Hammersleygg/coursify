@@ -4,15 +4,13 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
 .registerTitle{
     font-size: 45px;
-    margin-bottom: 0px;
     text-align: center;
     color: maroon;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'appleberry';
 }
 
 .registerForm{
@@ -29,24 +27,26 @@
 .registerForm > label{
     margin: 10px 0;
     font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'josefin sans', sans-serif;
 }
 
 .registerInput{
-    padding: 12px;
+    padding: 8px;
     background-color: #f5f5f5;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
 }
 
 .registerButton{
+    font-family: josefin sans;
+    font-size: 14px;
     margin-top: 20px;
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    padding: 12px 30px;
+    padding: 8px 16px;
     background-color: #800000;
     color: #fff;
     transition: background-color 0.3s;
@@ -58,11 +58,13 @@
 
 
 .registerLoginButton{
+    font-size: 14px;
+    font-family: josefin sans;
     cursor: pointer;
     background-color: #800000;
     border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
+    padding: 8px 16px;
+    border-radius: 10px;
     color: #fff;
     transition: background-color 0.3s;
 }
@@ -72,10 +74,6 @@
 }
   
   .registerLoginText {
-    margin-top: 10px;
     color: #f9f6f6;
   }
   
-  .registerLoginButton {
-    margin-top: 5px;
-  }
