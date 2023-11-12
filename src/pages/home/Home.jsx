@@ -14,7 +14,7 @@ const Home = () => {
 };
 
 export default Home;
-
+//thst comment 
 /*
 import SearchBar from '../../components/SearchBar/SearchBar';
 import WebsiteDescription from '../../components/description/WebsiteDescription';
