@@ -1,17 +1,9 @@
 
-.search-bar input {
-  width: 250px;
-  padding: 8px;
-  border: 1px solid #000000;
-  border-radius: 20px; /* Add rounded corners */
-  font-size: 12px;
-}
 
 .input-button-container {
   display: flex;
   align-items: center; /* Align vertically */
   width: 350px;
-  border: 1px solid #000000; /* Border around the entire container */
   border-radius: 20px;
   overflow: hidden; /* Ensures the button fits within the border radius */
 }
@@ -19,17 +11,13 @@
 .input-button-container input {
   flex-grow: 1;
   padding: 8px;
-  margin: 0; /* Reset any default margin */
   border-radius: 20; 
   font-size: 12px;
 }
 
 .input-button-container button {
-  background-color: lightgrey;
-  padding: 10px 12px; /* Adjust as needed */
-  border: none; /* Remove border */
-  border-radius: 0; /* Remove rounded corners */
-  color: white;
+  padding: 10px 12px;
+  border-radius: 0; 
   cursor: pointer;
 }
 
@@ -48,7 +36,6 @@
   width: 100%;
   max-height: 200px;
   overflow-y: auto;
-  border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

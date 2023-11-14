@@ -1,5 +1,5 @@
   .top {
-    background-color: #ffffff;
+    background-color: rgb(237, 235, 235);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the bottom */
     display: flex;
     padding: 10px 20px;
