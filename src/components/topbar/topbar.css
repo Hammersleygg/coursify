@@ -60,7 +60,7 @@
   .accountMenu .link:hover,
   .accountMenu button:hover {
     color: #fff;
-    background-color: maroon;
+    background-color: rgb(10, 10, 54);
   }
   
   
@@ -78,6 +78,23 @@
   
   .accountButton:hover {
     color: #fff;
-    background-color: maroon;
+    background-color:  rgb(10, 10, 54);
+  }
+
+  .classButton {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    color: black; 
+    background: none;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.4s, color 0.4s;
+    text-decoration: none;
   }
   
+  .classButton:hover {
+    color: #fff;
+    background-color:  rgb(10, 10, 54);
+  }

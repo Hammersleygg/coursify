@@ -9,11 +9,12 @@
 
 .input-button-container {
   display: flex;
-  align-items: center; /* Align vertically */
-  width: 350px;
-  border: 1px solid #000000; /* Border around the entire container */
+  align-items: center;
+  width: 300px;
+  border: 2px solid #000000;
   border-radius: 20px;
-  overflow: hidden; /* Ensures the button fits within the border radius */
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .input-button-container input {
@@ -33,22 +34,20 @@
   cursor: pointer;
 }
 
+/* Search Results */
 .search-results-container {
   height: 250px;
   width: 250px;
   margin-top: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .search-results {
-  margin-top: 20px;
-  margin-bottom: auto;
   background-color: #fff;
-  padding: 10px 0;
-  width: 100%;
+  padding: 10px;
   max-height: 200px;
   overflow-y: auto;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -81,6 +80,8 @@
   background-color: maroon; /* Darker Maroon on hover */
 }
 
+
+/* Not found message */
 .not-found-message {
   background-color: #fff;
   padding: 10px 0;
@@ -93,15 +94,14 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Modal container */
+/* Modal styles */
 .modal-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
-  display: flex;
+background: rgba(255, 255, 255, 0.7);  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
