@@ -1,36 +1,29 @@
 
-.search-bar input {
-  width: 250px;
-  padding: 8px;
-  border: 1px solid #000000;
-  border-radius: 20px; /* Add rounded corners */
-  font-size: 12px;
-}
 
 .input-button-container {
   display: flex;
-  align-items: center;
-  width: 300px;
-  border: 2px solid #000000;
+  align-items: center; /* Align vertically */
+  width: 350px;
+  border: 1px solid #000000; /* Border around the entire container */
   border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 20px;
+  overflow: hidden; /* Ensures the button fits within the border radius */
 }
 
 .input-button-container input {
+  background-color: rgb(245, 245, 245);
+  border: none;
   flex-grow: 1;
-  padding: 8px;
-  margin: 0; /* Reset any default margin */
-  border-radius: 20; 
+  padding: 9px;
+  border-radius: 10; 
   font-size: 12px;
 }
 
 .input-button-container button {
-  background-color: lightgrey;
-  padding: 10px 12px; /* Adjust as needed */
-  border: none; /* Remove border */
-  border-radius: 0; /* Remove rounded corners */
-  color: white;
+  background-color: #1c1c1c;
+  margin: auto;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 0; 
   cursor: pointer;
 }
 
@@ -43,11 +36,14 @@
 }
 
 .search-results {
+  margin-top: 20px;
+  margin-bottom: auto;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 0;
+  width: 100%;
   max-height: 200px;
   overflow-y: auto;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -68,7 +64,7 @@
 }
 
 .search-bar button {
-  color: #000000; /* Text color */
+  color: #ffffff; /* Text color */
   font-family: 'appleberry';
   font-size: 12px;
   cursor: pointer;

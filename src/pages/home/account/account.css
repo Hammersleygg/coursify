@@ -12,7 +12,7 @@
     align-items: center;
     width: 80%;
     max-width: 600px;
-    background-color: #ffffff9f;
+    background-color: rgb(237, 235, 235);
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -43,7 +43,7 @@
 }
 
 .accountIcon:hover {
-    background-color: #f5f5f5;
+    background-color: rgb(237, 235, 235);
     color: #333;
 }
 
