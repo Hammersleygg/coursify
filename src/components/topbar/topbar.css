@@ -82,3 +82,22 @@
     color: #fff;
     background-color: maroon;
   }
+
+  .classButton {
+    margin-right: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    color: black; 
+    background: none;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.4s, color 0.4s;
+    text-decoration: none;
+  }
+
+  .classButton:hover {
+    color: #fff;
+    background-color: maroon;
+  }
