@@ -3,6 +3,7 @@ body {
   margin: 0;
   background-image: url('./assets/wideRuledBackground.svg');
   background-size: cover;
+  background-attachment: fixed;
   font-family: 'appleberry', sans-serif; 
 }
 
