@@ -1,4 +1,7 @@
 
+.search-bar {
+  margin-top: none;
+}
 
 .input-button-container {
   display: flex;
