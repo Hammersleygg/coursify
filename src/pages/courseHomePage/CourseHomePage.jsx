@@ -8,11 +8,11 @@ const {selectedCourse} = location.state || {};
 
     const mockPosts = [
         {
-            content: "this is some advice."}, 
+            content: "lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus sit, amet luctus venenatis lectus mollis magna fringilla urna mollis iaculis nunc sed augue lacus, viverra nec tincidunt idente rhoncus urna neque viverra justo nec ultrices."},
         {
-            content: "this is some more advice."},
+            content: "lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus sit, amet luctus venenatis lectus mollis magna fringilla urna mollis iaculis nunc sed augue lacus, viverra nec tincidunt idente rhoncus urna neque viverra justo nec ultrices."},
         {
-            content: "this is some advice too."},
+            content: "lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus sit, amet luctus venenatis lectus mollis magna fringilla urna mollis iaculis nunc sed augue lacus, viverra nec tincidunt idente rhoncus urna neque viverra justo nec ultrices."},
     ];
     return (
         <div className="course-home-page-container">

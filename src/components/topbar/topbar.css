@@ -83,7 +83,7 @@
     background-color: maroon;
   }
 
-  .coursesButton {
+  .classButton {
     margin-right: 8px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
@@ -97,7 +97,7 @@
     text-decoration: none;
   }
 
-  .coursesButton:hover {
+  .classButton:hover {
     color: #fff;
     background-color: maroon;
   }
