@@ -13,7 +13,7 @@
 }
 
 .input-button-container input {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(255, 255, 255);
   border: none;
   flex-grow: 1;
   padding: 9px;
