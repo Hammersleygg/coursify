@@ -36,7 +36,7 @@ export default function TopBar() {
 
       <div className="topRight">
         <Link to="/class" className='classButton'>
-          Class
+          Courses
         </Link>
         <button
           className='accountButton'
