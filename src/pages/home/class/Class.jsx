@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './class.css';
 
-const Class = () => {
+const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState('');
 
@@ -44,4 +44,4 @@ const Class = () => {
   );
 };
 
-export default Class;
+export default Courses;
