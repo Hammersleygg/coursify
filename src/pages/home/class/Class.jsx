@@ -21,7 +21,7 @@ const Class = () => {
   }, []);
 
   const handleCourseChange = (e) => {
-    setSelectedCourse(e.target.value);
+    setSelectedCourse(e.target.value); 
     // We can add additional logic here if needed
   };
 

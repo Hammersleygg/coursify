@@ -7,22 +7,14 @@
     justify-content: center;
 }
 
-/* Style the WebsiteDescription component */
-.website-description {
-    text-align: center;
-    margin: 20px;
-    color: #333;
-    max-width: 800px;
+.LargeLogo {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    height: auto;
 }
 
-.website-description h2 {
-    font-size: 36px;
-    margin: 0;
-}
-
-.website-description p {
-    font-size: 20px;
-}
 
 /* Style the SearchBar component */
 .search-bar-container {
