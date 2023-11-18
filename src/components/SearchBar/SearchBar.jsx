@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './searchBar.css';
 import Papa from 'papaparse';
 
@@ -8,6 +9,7 @@ export default function SearchBar() {
     const [classData, setClassData] = useState([]);
     const [notFound, setNotFound] = useState(false);
     const [selectedClass, setSelectedClass] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('/classCSV.csv')
@@ -51,6 +53,7 @@ export default function SearchBar() {
 
     const handleClassClick = (classInfo) => {
         setSelectedClass(classInfo);
+        navigate(`/class/${classInfo['Class Number']}`, {state: {selectedCourse: classInfo}});
     };
 
     const closePopup = () => {

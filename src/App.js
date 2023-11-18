@@ -11,6 +11,7 @@ import Settings from './pages/home/settings/Settings';
 import Login from './pages/home/login/Login';
 import Register from './pages/register/Register';
 import Class from './pages/home/class/Class';
+import CourseHomePage from './pages/courseHomePage/CourseHomePage';
 import './app.css';
 
 function AnimatedRoutes() {
@@ -28,6 +29,7 @@ function AnimatedRoutes() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/post/:postId" element={<Single />} />
           <Route path="/class" element={<Class />} />
+          <Route path="/class/:courseId" element={<CourseHomePage />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>

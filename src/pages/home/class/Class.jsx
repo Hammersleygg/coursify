@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './class.css';
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState('');
+  
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch courses from the CSV file
     fetch('/classCSV.csv')
       .then(response => response.text())
       .then(data => {
-        // Parse CSV data and extract the course names
         const rows = data.split('\n');
         const courseNames = rows.map(row => row.split(',')[0].trim());
         setCourses(courseNames);
@@ -20,10 +20,11 @@ const Courses = () => {
       .catch(error => console.error('Error fetching courses:', error));
   }, []);
 
-  const handleCourseChange = (e) => {
-    setSelectedCourse(e.target.value); 
-    // We can add additional logic here if needed
-  };
+const handleCourseChange = (event) => {
+  const course = event.target.value;
+  setSelectedCourse(course);
+  navigate(`/class/${course}`, {state: {selectedCourse: course}});
+};
 
   return (
     <div className="container">
