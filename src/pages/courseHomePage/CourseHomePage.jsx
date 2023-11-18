@@ -16,7 +16,8 @@ const {selectedCourse} = location.state || {};
     ];
     return (
         <div className="course-home-page-container">
-            <h1>{selectedCourse? selectedCourse['Course Name'] : 'Course Name'}</h1>
+            <h1 className="course-headline">SELECTED COURSE </h1>
+            {/* <h1>{selectedCourse? selectedCourse['Course Name'] : 'Course Name'}</h1> */}
             <div className="grid-of-posts">
                 {mockPosts.map((post, index) => (
                     <div key={index} className="post">
