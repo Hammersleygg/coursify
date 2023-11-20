@@ -1,12 +1,17 @@
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getDocs, collection, addDoc } from 'firebase/firestore';
+import { getDocs, collection, addDoc, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../../firebase-config';
+import Modal from 'react-modal'; // Import the react-modal library
 import './courseHomePage.css';
 
 const CourseHomePage = () => {
   const [comments, setComments] = useState([]);
   const [classInfo, setClassInfo] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [userName, setUserName] = useState('');
+  const [commentText, setCommentText] = useState('');
   const location = useLocation();
   const { selectedCourse } = location.state || {};
 
@@ -16,7 +21,11 @@ const CourseHomePage = () => {
         const querySnapshot = await getDocs(collection(db, 'classComments'));
         const commentsData = [];
         querySnapshot.forEach((doc) => {
-          commentsData.push(doc.data().Comment);
+          commentsData.push({
+            id: doc.id,
+            comment: doc.data().Comment,
+            userName: doc.data().UserName,
+          });
         });
         setComments(commentsData);
 
@@ -32,19 +41,39 @@ const CourseHomePage = () => {
     getData();
   }, []);
 
-  const addComment = async () => {
-    const newComment = window.prompt('Enter your comment:');
-    if (newComment) {
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setUserName('');
+    setCommentText('');
+  };
+
+  const handleCommentSubmit = async () => {
+    if (userName && commentText) {
       try {
         const docRef = await addDoc(collection(db, 'classComments'), {
-          Comment: newComment,
+          UserName: userName,
+          Comment: commentText,
           // Add other fields as needed
         });
 
-        setComments([...comments, newComment]);
+        setComments([...comments, { id: docRef.id, userName, comment: commentText }]);
+        closeModal();
       } catch (error) {
         console.error('Error adding document:', error);
       }
+    }
+  };
+
+  const deleteComment = async (commentId) => {
+    try {
+      await deleteDoc(doc(db, 'classComments', commentId));
+      setComments(comments.filter((comment) => comment.id !== commentId));
+    } catch (error) {
+      console.error('Error deleting document:', error);
     }
   };
 
@@ -52,13 +81,40 @@ const CourseHomePage = () => {
     <div className="course-home-page-container">
       <h1 className="course-headline">{classInfo}</h1>
       <div className="grid-of-posts">
-        {comments.map((comment, index) => (
-          <div key={index} className="post">
-            {comment}
+        {comments.map((comment) => (
+          <div key={comment.id} className="post">
+            <span>{comment.userName}: {comment.comment}</span>
+            <button onClick={() => deleteComment(comment.id)}>Delete</button>
           </div>
         ))}
       </div>
-      <button onClick={addComment}>Add Comment</button>
+      <button onClick={openModal}>Add Comment</button>
+
+      {/* Custom Modal for adding comments */}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Add Comment"
+      >
+        <h2>Add Comment</h2>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </label>
+        <label>
+          Comment:
+          <textarea
+            value={commentText}
+            onChange={(e) => setCommentText(e.target.value)}
+          />
+        </label>
+        <button onClick={handleCommentSubmit}>Submit</button>
+        <button onClick={closeModal}>Cancel</button>
+      </Modal>
     </div>
   );
 };
