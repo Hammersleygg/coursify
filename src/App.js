@@ -5,7 +5,6 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Home from './pages/home/Home';
 import TopBar from './components/topbar/TopBar';
-import Single from './pages/home/single/Single';
 import Account from './pages/home/account/Account';
 import Settings from './pages/home/settings/Settings';
 import Login from './pages/home/login/Login';
@@ -27,7 +26,6 @@ function AnimatedRoutes() {
           <Route path="/Account" element={<Register />} />
           <Route path="/Account2" element={<Account />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/post/:postId" element={<Single />} />
           <Route path="/class" element={<Class />} />
           <Route path="/class/:courseId" element={<CourseHomePage />} />
         </Routes>
