@@ -46,11 +46,15 @@ const CourseHomePage = () => {
   };
 
   const closeModal = () => {
-    if (window.confirm('Are you sure you want to cancel?')) {
     setIsModalOpen(false);
     setUserName('');
     settipText('');
-  }
+  };
+
+  const confirmCloseModal = () => {
+    if (window.confirm('Are you sure you want to cancel?')) {
+      closeModal();
+    }
   };
 
   const handletipSubmit = async () => {
@@ -59,7 +63,6 @@ const CourseHomePage = () => {
         const docRef = await addDoc(collection(db, 'classtips'), {
           UserName: userName,
           tip: tipText,
-          // Add other fields as needed
         });
 
         settips([...tips, { id: docRef.id, userName, tip: tipText }]);
@@ -116,10 +119,11 @@ const CourseHomePage = () => {
           />
         </label>
         <button onClick={handletipSubmit}>Submit</button>
-        <button onClick={closeModal}>Cancel</button>
+        <button onClick={confirmCloseModal}>Cancel</button>
       </Modal>
     </div>
   );
 };
+
 
 export default CourseHomePage;
