@@ -99,7 +99,7 @@ const CourseHomePage = () => {
         shouldCloseOnOverlayClick={false}
         contentLabel="Add tip"
       >
-        <h2>Add tip</h2>
+        <h2>Add Your Tip</h2>
         <label>
           Name:
           <input

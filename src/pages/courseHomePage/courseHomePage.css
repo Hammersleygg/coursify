@@ -95,11 +95,18 @@ body {
     max-height: 50%;
     overflow-y: auto;
   }
+
+  .ReactModal__Content h2 {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+
   
   /* Input and textarea styles inside the modal */
   .ReactModal__Content input,
   .ReactModal__Content textarea {
-    margin: 10px 10px;
+    margin: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -109,8 +116,9 @@ body {
   
   /* Button styles inside the modal */
   .ReactModal__Content button {
+    font-family: 'josefin sans';
     margin-right: 10px;
-    padding: 15px;
+    padding: 10px;
     background-color: maroon; /* Green button color */
     color: #fff; /* White text color */
     border: none;
