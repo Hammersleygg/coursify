@@ -46,9 +46,11 @@ const CourseHomePage = () => {
   };
 
   const closeModal = () => {
+    if (window.confirm('Are you sure you want to cancel?')) {
     setIsModalOpen(false);
     setUserName('');
     setCommentText('');
+  }
   };
 
   const handleCommentSubmit = async () => {
@@ -93,7 +95,8 @@ const CourseHomePage = () => {
       {/* Custom Modal for adding comments */}
       <Modal
         isOpen={isModalOpen}
-        onRequestClose={closeModal}
+        onRequestClose={() => {}}
+        shouldCloseOnOverlayClick={false}
         contentLabel="Add Comment"
       >
         <h2>Add Comment</h2>
