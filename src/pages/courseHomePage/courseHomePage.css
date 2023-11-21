@@ -89,22 +89,22 @@ body {
     padding: 30px;
     background: #fff; /* White background */
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for a subtle lift */
+    box-shadow: 0 0 2px 2px 4px  rgba(0, 0, 0, 0.3); /* Box shadow for a subtle lift */
     max-width: 500px;
     width: 90%;
-    max-height: 90%;
+    max-height: 50%;
     overflow-y: auto;
   }
   
   /* Input and textarea styles inside the modal */
   .ReactModal__Content input,
   .ReactModal__Content textarea {
-    width: calc(100%-30px);
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
+    margin: 10px 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   /* Button styles inside the modal */

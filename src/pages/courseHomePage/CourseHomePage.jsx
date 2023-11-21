@@ -7,27 +7,27 @@ import Modal from 'react-modal'; // Import the react-modal library
 import './courseHomePage.css';
 
 const CourseHomePage = () => {
-  const [comments, setComments] = useState([]);
+  const [tips, settips] = useState([]);
   const [classInfo, setClassInfo] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userName, setUserName] = useState('');
-  const [commentText, setCommentText] = useState('');
+  const [tipText, settipText] = useState('');
   const location = useLocation();
   const { selectedCourse } = location.state || {};
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, 'classComments'));
-        const commentsData = [];
+        const querySnapshot = await getDocs(collection(db, 'classtips'));
+        const tipsData = [];
         querySnapshot.forEach((doc) => {
-          commentsData.push({
+          tipsData.push({
             id: doc.id,
-            comment: doc.data().Comment,
+            tip: doc.data().tip,
             userName: doc.data().UserName,
           });
         });
-        setComments(commentsData);
+        settips(tipsData);
 
         const classSnapshot = await getDocs(collection(db, 'class'));
         classSnapshot.forEach((doc) => {
@@ -49,20 +49,20 @@ const CourseHomePage = () => {
     if (window.confirm('Are you sure you want to cancel?')) {
     setIsModalOpen(false);
     setUserName('');
-    setCommentText('');
+    settipText('');
   }
   };
 
-  const handleCommentSubmit = async () => {
-    if (userName && commentText) {
+  const handletipSubmit = async () => {
+    if (userName && tipText) {
       try {
-        const docRef = await addDoc(collection(db, 'classComments'), {
+        const docRef = await addDoc(collection(db, 'classtips'), {
           UserName: userName,
-          Comment: commentText,
+          tip: tipText,
           // Add other fields as needed
         });
 
-        setComments([...comments, { id: docRef.id, userName, comment: commentText }]);
+        settips([...tips, { id: docRef.id, userName, tip: tipText }]);
         closeModal();
       } catch (error) {
         console.error('Error adding document:', error);
@@ -70,10 +70,10 @@ const CourseHomePage = () => {
     }
   };
 
-  const deleteComment = async (commentId) => {
+  const deletetip = async (tipId) => {
     try {
-      await deleteDoc(doc(db, 'classComments', commentId));
-      setComments(comments.filter((comment) => comment.id !== commentId));
+      await deleteDoc(doc(db, 'classtips', tipId));
+      settips(tips.filter((tip) => tip.id !== tipId));
     } catch (error) {
       console.error('Error deleting document:', error);
     }
@@ -83,23 +83,23 @@ const CourseHomePage = () => {
     <div className="course-home-page-container">
       <h1 className="course-headline">{classInfo}</h1>
       <div className="grid-of-posts">
-        {comments.map((comment) => (
-          <div key={comment.id} className="post">
-            <span>{comment.userName}: {comment.comment}</span>
-            <button onClick={() => deleteComment(comment.id)}>Delete</button>
+        {tips.map((tip) => (
+          <div key={tip.id} className="post">
+            <span>{tip.userName}: {tip.tip}</span>
+            <button onClick={() => deletetip(tip.id)}>Delete</button>
           </div>
         ))}
       </div>
-      <button onClick={openModal}>Add Comment</button>
+      <button onClick={openModal}>Add tip</button>
 
-      {/* Custom Modal for adding comments */}
+      {/* Custom Modal for adding tips */}
       <Modal
         isOpen={isModalOpen}
         onRequestClose={() => {}}
         shouldCloseOnOverlayClick={false}
-        contentLabel="Add Comment"
+        contentLabel="Add tip"
       >
-        <h2>Add Comment</h2>
+        <h2>Add tip</h2>
         <label>
           Name:
           <input
@@ -109,13 +109,13 @@ const CourseHomePage = () => {
           />
         </label>
         <label>
-          Comment:
+          tip:
           <textarea
-            value={commentText}
-            onChange={(e) => setCommentText(e.target.value)}
+            value={tipText}
+            onChange={(e) => settipText(e.target.value)}
           />
         </label>
-        <button onClick={handleCommentSubmit}>Submit</button>
+        <button onClick={handletipSubmit}>Submit</button>
         <button onClick={closeModal}>Cancel</button>
       </Modal>
     </div>
