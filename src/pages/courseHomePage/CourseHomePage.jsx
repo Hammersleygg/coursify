@@ -112,7 +112,7 @@ const CourseHomePage = () => {
           />
         </label>
         <button onClick={handleCommentSubmit}>Submit</button>
-        <button onClick={confirmCloseModal}>Cancel</button>
+        <button onClick={() => setModalOpen(false)}>Cancel</button>
       </Modal>
     </div>
   );
