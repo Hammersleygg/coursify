@@ -48,13 +48,7 @@ const CourseHomePage = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setUserName('');
-    settipText('');
-  };
-
-  const confirmCloseModal = () => {
-    if (window.confirm('Are you sure you want to cancel?')) {
-      closeModal();
-    }
+    setCommentText('');
   };
 
   const handletipSubmit = async () => {
@@ -98,9 +92,8 @@ const CourseHomePage = () => {
       {/* Custom Modal for adding tips */}
       <Modal
         isOpen={isModalOpen}
-        onRequestClose={() => {}}
-        shouldCloseOnOverlayClick={false}
-        contentLabel="Add tip"
+        onRequestClose={closeModal}
+        contentLabel="Add Comment"
       >
         <h2>Add Your Tip</h2>
         <label>
