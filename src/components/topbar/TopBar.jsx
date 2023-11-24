@@ -26,6 +26,8 @@ export default function TopBar() {
     navigate('/class');
   }
 
+  const userLoggedIn = /* Add logic to check if the user is logged in */ false;
+
   return (
     <div className="top">
       <div className="topLeft">
@@ -48,23 +50,31 @@ export default function TopBar() {
 
       {showAccountMenu && (
         <div className="accountMenu">
-          <Link className="link" to="/Account" onClick={() => setShowAccountMenu(false)}>
-            Account Home
-          </Link>
-          <Link className="link" to="/settings" onClick={() => setShowAccountMenu(false)}>
-            Settings
-          </Link>
-          <Link 
-            className="link" 
-            to="#" 
-            onClick={(e) => {
-              e.preventDefault(); 
-              logout(); 
-              setShowAccountMenu(false);
-            }}
-          >
-            Sign Out
-          </Link>
+          {userLoggedIn ? (
+            <>
+              <Link className="link" to="/Account" onClick={() => setShowAccountMenu(false)}>
+                Account Home
+              </Link>
+              <Link className="link" to="/settings" onClick={() => setShowAccountMenu(false)}>
+                Settings
+              </Link>
+              <Link 
+                className="link" 
+                to="#" 
+                onClick={(e) => {
+                  e.preventDefault(); 
+                  logout(); 
+                  setShowAccountMenu(false);
+                }}
+              >
+                Sign Out
+              </Link>
+            </>
+          ) : (
+            <Link className="link" to="/login" onClick={() => setShowAccountMenu(false)}>
+              Sign In
+            </Link>
+          )}
         </div>
       )}
     </div>

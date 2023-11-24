@@ -65,10 +65,31 @@ body {
     transition: background-color 0.3s ease-in-out;
   }
   
+  
   .delete-button:hover {
     background-color: #FF4500; /* Darker tomato on hover */
   }
-  
+
+
+  /* Edit button styles */
+  .course-home-page-container button {
+    font-family: 'josefin sans';
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #fff; /* White button color */
+    color: #000; /* Black text color */
+    border: 2px solid #000; /* Black border */
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.course-home-page-container button:hover {
+    background-color: maroon; /* Red on hover */
+    color: #fff; /* White text color on hover */
+}
+
+
   /* Modal styles */
   .ReactModal__Overlay {
     display: flex;
@@ -119,7 +140,7 @@ body {
     font-family: 'josefin sans';
     margin-right: 10px;
     padding: 10px;
-    background-color: maroon; /* Green button color */
+    background-color: maroon; /* Red button color */
     color: #fff; /* White text color */
     border: none;
     border-radius: 8px;
@@ -130,4 +151,5 @@ body {
   .ReactModal__Content button:hover {
     background-color: black; /* Darker green on hover */
   }
+
   
