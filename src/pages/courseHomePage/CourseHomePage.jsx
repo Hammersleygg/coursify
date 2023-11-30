@@ -80,7 +80,7 @@ const CourseHomePage = () => {
 
   return (
     <div className="course-home-page-container">
-      <h1 className="course-headline">{"Software Engineering"}</h1>
+      <h1 className="course-headline">"Software Engineering"</h1>
       <div className="grid-of-posts">
         {Comments.map((Comment) => (
           <div key={Comment.id} className="post">
