@@ -61,7 +61,7 @@ const CourseHomePage = () => {
           class: classInfo
         });
 
-        setComments([...Comments, { id: docRef.id, userName, Comment: CommentText,class: "Software Engineering" }]);
+        setComments([...Comments, { id: docRef.id, userName, Comment: CommentText,class: classInfo }]);
         closeModal();
       } catch (error) {
         console.error('Error adding document:', error);
