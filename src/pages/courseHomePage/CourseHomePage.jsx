@@ -25,11 +25,12 @@ const CourseHomePage = () => {
             id: doc.id,
             Comment: doc.data().Comment,
             userName: doc.data().UserName,
+
           });
         });
         setComments(CommentsData);
 
-        const classSnapshot = await getDocs(collection(db, 'class'));
+        const classSnapshot = await getDocs(collection(db, 'classComments'));
         classSnapshot.forEach((doc) => {
           setClassInfo(doc.data().class);
         });

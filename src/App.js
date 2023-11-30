@@ -24,7 +24,7 @@ function AnimatedRoutes() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/Account" element={<Register />} />
-          <Route path="/Account2" element={<Account />} />
+          <Route path="/Account2" element={<Home />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/class" element={<Class />} />
           <Route path="/class/:courseId" element={<CourseHomePage />} />
