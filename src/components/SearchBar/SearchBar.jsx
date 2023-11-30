@@ -35,12 +35,14 @@ export default function SearchBar() {
             setResults(classData);
             setNotFound(false);
         } else {
-            // Search for classes in the classData using the query
+            // Search for classes in the classData using the query in both 'Class Name' and 'Class Number'
             const searchResults = classData.filter((classInfo) => {
-                const classNumber = classInfo['Class Number'];
-                return classNumber && classNumber.toLowerCase().includes(query.toLowerCase());
+                const className = classInfo['Class Name'] && classInfo['Class Name'].toLowerCase();
+                const classNumber = classInfo['Class Number'] && classInfo['Class Number'].toLowerCase();
+                
+                return className.includes(query.toLowerCase()) || (classNumber && classNumber.includes(query.toLowerCase()));
             });
-
+    
             if (searchResults.length > 0) {
                 setResults(searchResults);
                 setNotFound(false);
