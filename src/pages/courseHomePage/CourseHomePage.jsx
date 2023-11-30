@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getDocs, collection, addDoc, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../../firebase-config';
-import Modal from 'react-modal'; // Import the react-modal library
+import Modal from 'react-modal';
 import './courseHomePage.css';
 
 const CourseHomePage = () => {
@@ -25,7 +24,6 @@ const CourseHomePage = () => {
             id: doc.id,
             Comment: doc.data().Comment,
             userName: doc.data().UserName,
-
           });
         });
         setComments(CommentsData);
@@ -41,6 +39,21 @@ const CourseHomePage = () => {
 
     getData();
   }, []);
+
+  // Function to generate pastel colors
+  const getRandomPastelColor = () => {
+    const letters = '0123456789ABCDEF';
+    const baseColor = '#';
+    let color = baseColor;
+
+    // Generate a pastel shade by averaging the RGB values with white
+    for (let i = 0; i < 3; i++) {
+      const value = parseInt(Math.random() * 128) + 128; // Ensure it's a lighter shade
+      color += Math.floor((255 + value) / 2).toString(16);
+    }
+
+    return color;
+  };
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -58,10 +71,19 @@ const CourseHomePage = () => {
         const docRef = await addDoc(collection(db, 'classComments'), {
           UserName: userName,
           Comment: CommentText,
-          class: classInfo
+          class: classInfo,
         });
 
-        setComments([...Comments, { id: docRef.id, userName, Comment: CommentText,class: classInfo }]);
+        setComments([
+          ...Comments,
+          {
+            id: docRef.id,
+            userName,
+            Comment: CommentText,
+            class: classInfo,
+            color: getRandomPastelColor(),
+          },
+        ]);
         closeModal();
       } catch (error) {
         console.error('Error adding document:', error);
@@ -80,11 +102,17 @@ const CourseHomePage = () => {
 
   return (
     <div className="course-home-page-container">
-      <h1 className="course-headline">"Software Engineering"</h1>
+      <h1 className="course-headline">Software Engineering</h1>
       <div className="grid-of-posts">
         {Comments.map((Comment) => (
-          <div key={Comment.id} className="post">
-            <span>{Comment.userName}: {Comment.Comment}</span>
+          <div
+            key={Comment.id}
+            className="post"
+            style={{ backgroundColor: Comment.color }}
+          >
+            <span>
+              {Comment.userName}: {Comment.Comment}
+            </span>
             <button onClick={() => deleteComment(Comment.id)}>Delete</button>
           </div>
         ))}
@@ -119,6 +147,5 @@ const CourseHomePage = () => {
     </div>
   );
 };
-
 
 export default CourseHomePage;
