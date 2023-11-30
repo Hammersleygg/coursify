@@ -5,6 +5,26 @@ import { db } from '../../firebase-config';
 import Modal from 'react-modal';
 import './courseHomePage.css';
 
+const getRandomPastelColor = () => {
+  const storedColor = localStorage.getItem('userColor');
+
+  if (storedColor) {
+    return storedColor;
+  }
+
+  const letters = '0123456789ABCDEF';
+  const baseColor = '#';
+  let color = baseColor;
+
+  for (let i = 0; i < 3; i++) {
+    const value = parseInt(Math.random() * 128) + 128;
+    color += Math.floor((255 + value) / 2).toString(16).padStart(2, '0');
+  }
+
+  localStorage.setItem('userColor', color);
+  return color;
+};
+
 const CourseHomePage = () => {
   const [Comments, setComments] = useState([]);
   const [classInfo, setClassInfo] = useState('');
@@ -19,13 +39,23 @@ const CourseHomePage = () => {
       try {
         const querySnapshot = await getDocs(collection(db, 'classComments'));
         const CommentsData = [];
+
         querySnapshot.forEach((doc) => {
+          const storedColor = localStorage.getItem(`commentColor_${doc.id}`);
+          const color = storedColor || getRandomPastelColor();
+
           CommentsData.push({
             id: doc.id,
             Comment: doc.data().Comment,
             userName: doc.data().UserName,
+            color: color,
           });
+
+          if (!storedColor) {
+            localStorage.setItem(`commentColor_${doc.id}`, color);
+          }
         });
+
         setComments(CommentsData);
 
         const classSnapshot = await getDocs(collection(db, 'classComments'));
@@ -39,21 +69,6 @@ const CourseHomePage = () => {
 
     getData();
   }, []);
-
-  // Function to generate pastel colors
-  const getRandomPastelColor = () => {
-    const letters = '0123456789ABCDEF';
-    const baseColor = '#';
-    let color = baseColor;
-
-    // Generate a pastel shade by averaging the RGB values with white
-    for (let i = 0; i < 3; i++) {
-      const value = parseInt(Math.random() * 128) + 128; // Ensure it's a lighter shade
-      color += Math.floor((255 + value) / 2).toString(16);
-    }
-
-    return color;
-  };
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -74,6 +89,9 @@ const CourseHomePage = () => {
           class: classInfo,
         });
 
+        const storedColor = localStorage.getItem(`commentColor_${docRef.id}`);
+        const color = storedColor || getRandomPastelColor();
+
         setComments([
           ...Comments,
           {
@@ -81,9 +99,14 @@ const CourseHomePage = () => {
             userName,
             Comment: CommentText,
             class: classInfo,
-            color: getRandomPastelColor(),
+            color: color,
           },
         ]);
+
+        if (!storedColor) {
+          localStorage.setItem(`commentColor_${docRef.id}`, color);
+        }
+
         closeModal();
       } catch (error) {
         console.error('Error adding document:', error);
@@ -94,6 +117,7 @@ const CourseHomePage = () => {
   const deleteComment = async (CommentId) => {
     try {
       await deleteDoc(doc(db, 'classComments', CommentId));
+      localStorage.removeItem(`commentColor_${CommentId}`);
       setComments(Comments.filter((Comment) => Comment.id !== CommentId));
     } catch (error) {
       console.error('Error deleting document:', error);
