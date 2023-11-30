@@ -58,9 +58,10 @@ const CourseHomePage = () => {
         const docRef = await addDoc(collection(db, 'classComments'), {
           UserName: userName,
           Comment: CommentText,
+          class: classInfo
         });
 
-        setComments([...Comments, { id: docRef.id, userName, Comment: CommentText }]);
+        setComments([...Comments, { id: docRef.id, userName, Comment: CommentText,class: classInfo }]);
         closeModal();
       } catch (error) {
         console.error('Error adding document:', error);
